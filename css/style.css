@@ -79,6 +79,8 @@ footer p:last-child{
   margin: 0px;
   top: 40px;
   width: 100%;
+  left: 0px;
+  padding-left: 25px;
 }
 
 
@@ -281,7 +283,7 @@ footer p:last-child{
 }
 
 .GallerySlide p{
-  font-size: 2.2em;
+  font-size: 1.6em;
   font-weight: 800;
   color: white;
   margin: 0.7vw 0px;
@@ -378,7 +380,7 @@ footer p:last-child{
     text-decoration:none;
     top: 0px;
     width:fit-content;
-
+    padding-left: 0px;
 }
 
 .flex-container-nav.hide-mobile{
