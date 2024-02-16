@@ -283,7 +283,7 @@ footer p:last-child{
 }
 
 .GallerySlide p{
-  font-size: 1.6em;
+  font-size: 1.4em;
   font-weight: 800;
   color: white;
   margin: 0.7vw 0px;
@@ -318,6 +318,8 @@ footer p:last-child{
   justify-content: center;
   gap: 10px;
   margin: 20px 0px;
+  z-index: 1;
+  position: relative;
 }
 #GalleryCubes button{
   width: 0.5em;
