@@ -219,7 +219,7 @@ footer p:last-child{
 }
 
 .TitleTemplet2{
-  background-image: url(/images/bonnerArrowGlobe_Phone.svg);
+  background-image: url("https://raw.githubusercontent.com/idont12/maccabiahWeb_ProgramingHelfProject/79cba502e7b0f9e364095d8676896d0e2a59663c/images/bonnerArrowGlobe_Phone.svg");
   background-position: top center;
   background-size: 100%;
   background-repeat: no-repeat;
