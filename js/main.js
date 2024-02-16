@@ -240,18 +240,3 @@ function inputValuesToGallery(slideNum) {
         }
     }
 }
-
-function chackChildForClass(List,chackClass,){
-        for (i = 0; i < List.length; i++) {
-        if (i == slideNum) {
-            if (List[i].classList.contains(chackClass)==false) {
-                List[i].classList.add(chackClass);
-            }
-        }
-        else {
-            if (List[i].classList.contains(chackClass)) {
-                List[i].classList.remove(chackClass);
-            }
-        }
-    }
-}
