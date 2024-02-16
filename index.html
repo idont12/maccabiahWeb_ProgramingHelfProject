@@ -1,0 +1,235 @@
+﻿<!doctype html>
+<html lang="eng" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="JavaScript Prog 3">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Telem">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Maccabiah</title>
+
+    <link rel="icon" type="image/x-icon" href="images/m21-logo_Dark.svg">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <nav>
+        <a href="#"><img class="smallLogo" alt="logo of the Maccabiah" src="images/m21-logo_white.svg"
+                width="2.5em"></a>
+        <button id="nav-button" class="btn-mobile hide" onclick="toggleNav()"><img src="images/NavPhone.svg"
+                alt="ניווט"></button>
+        <ul id="main-nav" class="flex-container-nav hide-mobile">
+            <li><a href="#funFacts">Fun Facts</a></li>
+            <li><a href="#tourchHolders">Tourch Holders</a></li>
+            <li><a href="#aboutUs">About us</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1 class="hideAlways">המכביה</h1>
+        <div id="headerImg" aria-label="header of the website"></div>
+        <img class="arrowDesign" alt="progress down arrow" src="images/ArrowDown.png">
+    </header>
+    <main>
+        <section id="funFacts" class="sectionTemple1">
+            <h2 class="blueTitle">Fun Facts</h2>
+            <div class="cardsContainer">
+                <button id="card1" class="flip-card" onclick="turnOverCard('card1')">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front" aria-label="click the card to flip it">
+                        </div>
+                        <div class="flip-card-back">
+                            <p>The Maccabiah got the reputation of the "Jewish Tinder", after a couple of athletes who
+                                met during the competition ended up getting married.</p>
+                        </div>
+                </button>
+                <button id="card2" class="flip-card" onclick="turnOverCard('card2')">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front" aria-label="click the card to flip it">
+                        </div>
+                        <div class="flip-card-back">
+                            <p>The Maccabiah is the third largest sporting event in the world, with over 2,000 active
+                                participants. Bigger than the Football World Cup.</p>
+                        </div>
+                </button>
+                <button id="card3" class="flip-card" onclick="turnOverCard('card3')">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front" aria-label="click the card to flip it">
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Even non-Jewish can partake in the Maccabiah if they have an Israeli ID. Just ask Asala
+                                Khalaj, the first Arab swimmer to win a gold medal.</p>
+                        </div>
+                </button>
+            </div>
+        </section>
+
+        <section id="tourchHolders">
+            <div class="TitleTemplet2">
+                <h2>Tourch Holders</h2>
+            </div>
+
+            <div id="GalleryContainerAll">
+                <div id="ButtonFillterGroup">
+                    <button class="button mark" onclick="fillterGallery('all')" filter="all">All</button>
+                    <button class="button" onclick="fillterGallery('male')" filter = "male">Male</button>
+                    <button class="button" onclick="fillterGallery('female')" filter = "female">Female</button>
+                </div>
+
+                <p class="textClickOnGallry">Click to know the athlete</p>
+                <div id="GalleryContainer">
+                    <button class="GalleryArrow left" onclick="isGoToNextSlide(false)"><img alt="arrowRight" src="images/ArrowLeft.png"/></button>
+                    <button id="GallerySlide_Prev" class="GallerySlide fadeCard">
+                        <div class="imgInGalleryCard"></div>
+                        <p></p>
+                    </button>
+                    <button id="GallerySlide_Main" class="GallerySlide" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                        <div class="imgInGalleryCard"></div>
+                        <p></p>
+                    </button>
+                    <button id="GallerySlide_Next" class="GallerySlide fadeCard">
+                        <div class="imgInGalleryCard"></div>
+                        <p></p>
+                    </button>
+                    <button class="GalleryArrow right" onclick="isGoToNextSlide(true)"><img alt="arrowRight" src="images/ArrowRight.png"/></button>
+                </div>
+                <div id="GalleryCubes">
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="container">
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">All Rights Reserved</h1>
+                    <button type="button" style="margin:0px" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        <li>
+                            Yael Arad image by שיר זוהר used according to license
+                            <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">
+                                CC BY-SA 4.0
+                            </a>
+                        </li>
+                        <li>
+                            Linoy Ashram image - by Ayelet Zussman used according to license
+                            <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">
+                                CC BY-SA 4.0
+                            </a>
+                        </li>
+                        <li>
+                            Tal Brody image by U.S. Embassy Tel Aviv used according to license
+                            <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank">
+                                CC BY-SA 2.0
+                            </a>
+                        </li>
+                        <li>
+                            Ori Sasson image by Fernando Frazão/Agência Brasil used according to license
+                            <a href="https://creativecommons.org/licenses/by/2.0" target="_blank">
+                                CC BY 2.0
+                            </a>
+                        </li>
+                        <li>
+                            Mickey Berkowitz image by
+                            <a href="https://www.flickr.com/photos/government_press_office/6984278159/" target="_blank">
+                                Government Press Office
+                            </a>
+                            according to license
+                            <a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank">
+                                CC BY-SA 3.0
+                            </a>
+                        </li>
+                        <li>
+                            Yarden Gerbi image used according to license
+                            <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en" target="_blank">
+                                CC0
+                            </a>
+                        </li>
+                        <li>
+                            Amnon avidan image by Israel Press and Photo Agency used according to license
+                            <a href="https://creativecommons.org/licenses/by/4.0" target="_blank">
+                                CC BY 4.0
+                            </a>
+                        </li>
+                        <li>
+                            Gal fridman image by Amoruso used according to license
+                            <a href="http://creativecommons.org/licenses/by-sa/3.0/" target="_blank">
+                                CC BY 4.0
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
+                    <button type="button" style="margin:0px" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body gridPopup">
+                    <diV>
+                        <h2 id="popupAbout-Name"></h2>
+                        <p id="popupAbout-Year"></p>
+                        <p id="popupAbout-About"></p>
+                    </diV>
+                    <img id="popupAbout-Img" src="">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer id="aboutUs">
+        <p>
+            Website built by non-athletes:
+            <br>
+            <a href="https://www.linkedin.com/in/sari-bali-71696b21b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BQg1Y0nCjRgKdMVZcci3mgg%3D%3D"
+                target="_blank" title="Find me on Linkedin">
+                Sari Bali</a>
+            ,
+            <a href="https://il.linkedin.com/in/yarden-zilberman-graphic-and-game-design?trk=public_profile_browsemap-profile"
+                target="_blank" title="Find me on Linkedin">
+                Yarden Zilberman</a> and
+            <a href="https://www.linkedin.com/in/shenhav-gida-0b5811278/" target="_blank" title="Find me on Linkedin">
+                Shenhav Gida
+            </a>
+            <br>
+            HIT, programming 3 course led by Omri Kahana and Dan Kohen
+        </p>
+        <p>
+            All rights reserved to their rightful owners, credits for images see <span class="Clickable_Text"
+                data-bs-toggle="modal" data-bs-target="#exampleModal">here</span>
+        </p>
+    </footer>
+</body>
+
+</html>

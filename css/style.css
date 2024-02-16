@@ -1,0 +1,485 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+  font-size: 20px;
+  --lightBlue:#00B1E2;
+  --red:#ef4c5f;
+  --deepBlue:#2c3673;
+}
+
+h2{
+  font-weight: 800;
+}
+
+button{
+  background-color: transparent;
+  border:none; 
+  box-shadow: none;
+}
+section{
+  margin: 15px 0px;
+}
+nav{
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  position: fixed;
+  z-index: 1000;
+  background: var(--deepBlue);
+  width: 100%;
+  top:0;
+}
+header{
+  margin-top: 1.5em;
+}
+nav>*{
+  padding: 10px;
+}
+.smallLogo{
+  width: 2.5em;
+}
+body{
+  font-family:'Heebo', sans-serif; 
+  direction:ltr; 
+  background-color: var(--deepBlue) ;
+}
+
+footer{
+  background: var(--lightBlue);
+  display: inline-block;
+  width: 100%;
+  color: white;
+  font-size: 0.8em;
+  padding: 10px 20px;
+}
+footer a{
+  color: white;
+}
+footer a:hover{
+  color: var(--deepBlue);
+}
+footer p:last-child{
+  margin: 0;
+}
+.Clickable_Text{
+  cursor: pointer;
+  text-decoration: underline;
+}
+.flex-container-nav{
+  display: flex;
+  gap: 20px;
+  background-color:var(--deepBlue);
+  padding: 10px;
+  flex-direction: column;
+  position: absolute;
+  text-align: left;
+  list-style:none;
+  margin: 0px;
+  top: 40px;
+  width: 100%;
+}
+
+
+.flex-container-nav a{
+  color: white;
+  font-size: 1em;
+  display: flex;
+  text-align: left;
+  text-decoration:none;
+}
+
+.flex-container-nav.hide-mobile{
+  display: none;
+}
+
+.hide{
+  display: block;
+}
+
+.hideAlways{
+  display:none; 
+}
+
+#headerImg{
+  width:90vw;
+  max-width: 1400px;
+  height:80vh; 
+  background-image:url("../images/Maccabiah_Phone.png");
+  background-size:90%;
+  background-repeat: no-repeat;
+  background-position:center center;
+  margin:auto; 
+}
+
+.arrowDesign{
+  display:block;
+  margin:auto; 
+  width:10%;
+  height:fit-content; 
+}
+
+/*#region Card*/
+
+.cardsContainer{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flip-card {
+  background-color: transparent;
+  width:80vw;
+  height:116.5vw;
+  perspective: 1000px;
+}
+.flip-card-back p {
+  color:#2C3673; 
+  text-align:left; 
+  margin:15%; 
+  position: relative;
+  bottom: 2vw;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card.turnOver .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+ background-image: url("../images/CardDown.png");
+  color: black;
+}
+
+.flip-card-back {
+  background-image:url("../images/CardUp.png"); 
+  color: white;
+  transform: rotateY(180deg);
+  display:flex; 
+  align-items:center;
+}
+/*#endregion Card*/
+
+
+.blueTitle{
+  background-color: var(--lightBlue);
+  padding: 15px 20px;
+  margin: auto;
+  display: block;
+  width: fit-content;
+  color: white;
+}
+
+.sectionTemple1 > .blueTitle{
+  top: 30px;
+  position: relative;
+}
+.sectionTemple1 > div{
+  padding-top: 50px;
+  width: 93%;
+  background-color: white;
+  margin: auto;
+}
+
+
+#container{
+  display: none;
+}
+
+.GallerySlide{
+  width: 64vw;
+  height: 80vw;
+  background: var(--lightBlue);
+  padding: 10px;
+  text-align: center;
+}
+
+.GallerySlide img{
+ width: 90%;
+ margin: auto;
+}
+
+.TitleTemplet2{
+  background-image: url(/images/bonnerArrowGlobe_Phone.svg);
+  background-position: top center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  min-height: 100px;
+  padding-top: 100px;
+  margin: 20px 15% 10px 15%;
+}
+
+.TitleTemplet2>h2{
+  background-color: var(--red);
+  border: 3.5px solid white;
+  padding: 7px 30px 5px 30px;
+  text-align: center;
+  width: fit-content;
+  margin: auto;
+  color: white;
+}
+
+.imgInGalleryCard{
+  width: 100%;
+  height: 80%;
+  background-size: cover;
+  background-position: center;
+  margin: auto;
+}
+
+#GalleryContainer{
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  position: relative;
+}
+
+#GallerySlide_Next, #GallerySlide_Prev {
+  display: none;
+}
+#GalleryContainerAll{
+  background-color: white;
+  margin: auto;
+  width: 93%;
+  padding: 30px 20px;
+  overflow: hidden;
+}
+
+.GalleryArrow{
+  position: absolute;
+  top: calc(50% - 1em);
+  height: 1.7em;
+  z-index: 1;
+}
+.GalleryArrow img{
+  height: 100%;
+}
+.GalleryArrow.right{
+  right: 0px;
+}
+.GalleryArrow.left{
+  left: 0px;
+}
+
+.GallerySlide p{
+  font-size: 2.2em;
+  font-weight: 800;
+  color: white;
+  margin: 0.7vw 0px;
+}
+
+.textClickOnGallry{
+  text-align: center;
+  color: var(--deepBlue);
+  font-weight: 700;
+  font-size: 0.85em;
+  margin: 10px;
+}
+
+.gridPopup {
+  display: grid;
+  gap: 50px;
+  text-align: justify;
+  color:var(--deepBlue);
+}
+
+#popupAbout-Img{
+  margin: auto;
+  width: 90%;
+}
+
+#main-nav li:hover{
+  text-decoration: underline white;
+}
+
+#GalleryCubes{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0px;
+}
+#GalleryCubes button{
+  width: 0.5em;
+  height: 0.5em;
+  background: var(--lightBlue);
+  opacity: 0.3;
+  cursor: pointer;
+  padding: 0px;
+  border:none;
+}
+
+#GalleryCubes button.mark{
+  opacity: 1;
+}
+
+.button {
+  background-color: var(--lightBlue);
+  color: white;
+  padding: 8px 15px;
+  transition: all 100ms;
+}
+
+.button.mark{
+  background-color: var(--red);
+}
+
+.button:hover {
+  background-color: #0099c4;
+  transform: scale(0.98);
+}
+.button.mark:hover{
+  background-color: #c63e4e;
+}
+
+
+#ButtonFillterGroup {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.modal-footer{
+  justify-content: center;
+}
+
+.modal-dialog{
+  color: var(--deepBlue);
+}
+
+.modal-footer button{
+  font-weight: 600;
+}
+
+@media only screen and (min-width: 650px) {
+  .flex-container-nav{
+    flex-direction: row;
+    position: relative;
+    font-size: 0.9em;
+    background-color: var(--deepBlue);
+    text-decoration:none;
+    top: 0px;
+    width:fit-content;
+
+}
+
+.flex-container-nav.hide-mobile{
+    display: flex;
+}
+
+.hide{
+    display: none;
+}
+
+#headerImg{
+  background-image:url("../images/Title_Computer.png");
+}
+  
+.cardsContainer{
+  display:flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.flip-card {
+  width:20vw;
+  min-width:288.33px;
+  height:29vw;
+  min-height: 433.46px;
+
+}
+.flip-card{
+  transition: scale 250ms ease-out;
+}
+
+.flip-card:hover{
+  scale: 1.03;
+}
+
+#GallerySlide_Main{
+  transition: padding 250ms ease-out;
+}
+
+#GallerySlide_Main:hover{
+  padding: 0px;
+}
+
+.arrowDesign{
+  width:3%;
+}
+
+.TitleTemplet2{
+  background-size: 50% 100%;
+  background-repeat: repeat-x;
+  background-position: left;
+  margin: 20px auto 0px auto;
+  padding: 15px 0px;
+  width: min(70%,800px);
+}
+.GallerySlide{
+  width: 16vw;
+  height: 20vw;
+  min-width: 210px;
+  min-height: 270px;
+}
+#GallerySlide_Next, #GallerySlide_Prev {
+  transform: scale(0.8);
+  opacity: 0.6;
+  display: block;
+  transition: transform 150ms;
+}
+#GallerySlide_Next::before, #GallerySlide_Prev::before{
+  content: "";
+    width: 110%;
+    height: 105%;
+    position: absolute;
+    top: 0px;
+    left: -5px;
+    background-image: linear-gradient(#ffffff00, #ffffffa6);
+}
+
+#GallerySlide_Next:hover, #GallerySlide_Prev:hover{
+  transform: scale(0.78);
+}
+
+#popupAbout-Img{
+  width: 300px;
+  align-self: center;
+}
+
+.gridPopup {
+  grid-template-columns: 2fr 1fr;
+  padding: 20px 45px;
+}
+
+.GallerySlide p{
+  font-size: 1.3em;
+}
+#ButtonFillterGroup{
+  display: block;
+}
+
+.modal-footer{
+  justify-content: flex-end;
+}
+}
+
